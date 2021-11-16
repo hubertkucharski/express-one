@@ -1,14 +1,12 @@
 const express = require('express');
+const cookieParser = require('cookie-parser');
 const product = require('./api/product');
-
-// const cookieParser = require('cookie-parser');
+const home = require('./routers/home');
 //
 const app = express();
-// app.use(cookieParser());
+app.use(cookieParser());
 app.use('/api/product', product);
-app.use('/', (req, res) => {
-  res.send('Home site');
-});
+app.use('/', home);
 // const object1 = {
 //   a: 'somestring',
 //   b: 42,
