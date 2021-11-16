@@ -6,6 +6,9 @@ const product = require('./api/product');
 const app = express();
 // app.use(cookieParser());
 app.use('/api/product', product);
+app.use('/', (req, res) => {
+  res.send('Home site');
+});
 // const object1 = {
 //   a: 'somestring',
 //   b: 42,
