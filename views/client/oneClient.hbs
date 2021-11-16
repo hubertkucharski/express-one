@@ -1,0 +1,47 @@
+<h2>Szczegółowe dane klienta o imieniu {{client.name}}:</h2>
+
+<table class="header-on-left">
+<tbody>
+    <tr>
+        <th>
+            E-mail
+        </th>
+        <td>
+            <a href="mailto: {{client.mail}}" target="_blank">{{client.mail}}</a>
+        </td>
+    </tr>
+<tr>
+        <th>
+            Imię
+        </th>
+        <td>
+            {{client.name}}
+        </td>
+    </tr>
+    {{#if client.notes}}
+<tr>
+        <th>
+            Notatki
+        </th>
+        <td>
+            {{client.notes}}
+        </td>
+    </tr>
+    {{/if}}
+<tr>
+        <th>
+            Data następnego kontaktu
+        </th>
+        <td>
+            {{client.nextContactAt}}
+        </td>
+    </tr>
+
+</tbody>
+</table>
+<p>
+<form method="get" action="/client/forms/edit/{{client.id}}">
+    <button type="submit">Edytuj dane</button>
+</form>
+</p>
+{{> go-to-clients}}

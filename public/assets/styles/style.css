@@ -1,0 +1,31 @@
+table{
+    text-align: left;
+    width: 80%;
+    margin: 0 auto;
+}
+tr{
+    margin: 2px;
+    background: aliceblue;
+}
+tr:nth-child(2n){
+    background: antiquewhite;
+}
+thead tr, .header-on-left th{
+    background: aquamarine;
+}
+td, th {
+    padding: 6px;
+
+}
+
+
+h2{
+    font-family: "Calibri Light";
+}
+.error{
+    background-color: lightpink;
+    border: 2px solid red;
+    margin: 11px auto;
+    padding: 20px;
+    width: 80%;
+}
