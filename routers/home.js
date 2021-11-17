@@ -14,8 +14,7 @@ router.get('/', async (req, res) => {
     description: 'Test description',
   }];
   res
-    .send('index');
-          //, { articles });
+    .send('index', { articles });
 });
 
 module.exports = router;
