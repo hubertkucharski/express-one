@@ -12,7 +12,7 @@ app.use(express.static('public'));
 app.engine('.hbs', hbs({ extname: '.hbs' }));
 app.set('view engine', '.hbs');
 app.use('/articles', articleRouter);
-app.get('/', async (req, res) => {
+app.use('/', async (req, res) => {
   const articles = [{
     title: 'Test Article',
     createdAt: new Date().toLocaleDateString(),
