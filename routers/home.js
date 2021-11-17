@@ -2,10 +2,9 @@ const express = require('express');
 
 const router = express.Router();
 
-router.get('/', (req, res) => {
-  res
-    .cookie('tasty', '10')
-    .send(req.cookies);
-});
+// router.get('/', async (req, res) => {
+//   res
+//     .render('index');
+// });
 
 module.exports = router;

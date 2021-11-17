@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<!--    <link rel="stylesheet" type="text/css" href="public/assets/styles/style.css"/>-->
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>Express-one</title>
+</head>
+<body>
+<div class="container">
+    <h1 class="mb-4">Blog Articles</h1>
+    <a href="/articles/new" class="btn btn-success" >New Article</a>
+
+    {{#each articles}}
+    <div class="card mt-4">
+        <div class="card-body">
+            <h4 class="card-title">
+            {{title}}
+            </h4>
+            <div class="card-subtitles text-muted mb-2">{{createdAt}}</div>
+            <div class="card-text mb-2">{{description}}</div>
+        </div>
+
+    </div>
+{{/each}}
+</div>
+<!--<form>-->
+<!--    <label name="name">Podaj imię:-->
+<!--        <input name="name" class="name">-->
+<!--    </label>-->
+<!--&lt;!&ndash;<button class="btn btn-success" type="submit">Wyślij</button>&ndash;&gt;-->
+<!--</form>-->
+</body>
+</html>

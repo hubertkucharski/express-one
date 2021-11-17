@@ -5,6 +5,7 @@ const router = express.Router();
 router.get('/', async (req, res) => {
   try {
     res
+      .cookie('tasty', '10')
       .status(200)
       .send('All ok');
   } catch (err) {
