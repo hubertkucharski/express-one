@@ -12,7 +12,7 @@ app.use(express.static('public'));
 app.engine('.hbs', hbs({ extname: '.hbs' }));
 app.set('view engine', '.hbs');
 app.use('/articles', articleRouter);
-app.use('/', home);
+app.use('/home', home);
 // const object1 = {
 //   a: 'somestring',
 //   b: 42,
