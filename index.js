@@ -1,31 +1,18 @@
 const express = require('express');
 const cookieParser = require('cookie-parser');
 const hbs = require('express-handlebars');
-// const product = require('./api/product');
+const home = require('./routers/home');
 const articleRouter = require('./routers/articles');
 //
 const app = express();
 app.use(cookieParser());
 // app.use('/api/product', product);
-// app.use('/', home);
+
 app.use(express.static('public'));
 app.engine('.hbs', hbs({ extname: '.hbs' }));
 app.set('view engine', '.hbs');
 app.use('/articles', articleRouter);
-app.get('/', async (req, res) => {
-  const articles = [{
-    title: 'Test Article',
-    createdAt: new Date().toLocaleDateString(),
-    description: 'Test description',
-  },
-  {
-    title: 'Test Article',
-    createdAt: new Date().toLocaleDateString(),
-    description: 'Test description',
-  }];
-  res
-    .render('index', { articles });
-});
+app.use('/', home);
 // const object1 = {
 //   a: 'somestring',
 //   b: 42,
