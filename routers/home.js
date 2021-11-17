@@ -14,8 +14,9 @@ router.get('/', async (req, res) => {
     description: 'Test description',
   }];
   res
-    .render('index');
-  // , { articles });
+  // .render('index');
+    .send('index');
+  // { articles });
 });
 
 module.exports = router;
