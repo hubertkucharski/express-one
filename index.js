@@ -30,7 +30,7 @@ app.use('/home', home);
 //     .send(req.cookies);
 // });
 //
-app.listen('3000', () => { console.log('server is running..'); });
+app.listen('0.0.0.0', () => { console.log('server is running..'); });
 // const myPromise = new Promise();
 // (async () => {
 //   await setTimeout(() => {
